@@ -4,14 +4,16 @@ import {FaEnvelope, FaPhone, FaGithub, FaInstagram} from "react-icons/fa";
 import { HiHome } from "react-icons/hi";
 import './styles.css';
 
+const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
+
 const desktopIcons = [
-  { id: 'myComputer', label: 'My Computer', icon: 'my-computer', image: '/icons/mc.png' },
-  { id: 'about', label: 'Sobre', icon: 'folder', image: '/icons/sobre.png' },
-  { id: 'internet', label: 'Internet Explorer', icon: 'internet', image: '/icons/ie.png' },
-  { id: 'projects', label: 'Projetos', icon: 'computer', image: '/icons/projetos.png' },
-  { id: 'network', label: 'Network Neighborhood', icon: 'network', image: '/icons/networkneighborhood.jpg' },
-  { id: 'contact', label: 'Contato', icon: 'mail', image: '/icons/contato.png' },
-  { id: 'trash', label: 'Lixeira', icon: 'trash', image: '/icons/lixeira.png' },
+  { id: 'myComputer', label: 'My Computer', icon: 'my-computer', image: asset('icons/mc.png') },
+  { id: 'about', label: 'Sobre', icon: 'folder', image: asset('icons/sobre.png') },
+  { id: 'internet', label: 'Internet Explorer', icon: 'internet', image: asset('icons/ie.png') },
+  { id: 'projects', label: 'Projetos', icon: 'computer', image: asset('icons/projetos.png') },
+  { id: 'network', label: 'Network Neighborhood', icon: 'network', image: asset('icons/networkneighborhood.jpg') },
+  { id: 'contact', label: 'Contato', icon: 'mail', image: asset('icons/contato.png') },
+  { id: 'trash', label: 'Lixeira', icon: 'trash', image: asset('icons/lixeira.png') },
 ];
 
 const initialWindows = {
@@ -24,22 +26,22 @@ const projectItems = [
   {
     title: 'Sistema de finanças pessoais',
     body: 'Sistema que permite o usuário cadastrar seus gastos por categorias, trazendo dashboard estatísticos informativos e organizados.',
-    screenshot: '/screenshots/financaspessoais.png',
+    screenshot: asset('screenshots/financaspessoais.png'),
   },
   {
     title: 'Dashboard de análise de dados do Brasileirão',
     body: 'Apresenta uma visualização da classificação, jogos do mês vigente e estatísticas separadas por time do Brasileirão.',
-    screenshot: '/screenshots/brasileirao.png',
+    screenshot: asset('screenshots/brasileirao.png'),
   },
   {
     title: 'App de diário pessoal com calendário',
     body: 'Vinculado a um banco de dados, o app permite registro diários de anotações e eventos em um calendário, como um planner.',
-    screenshot: '/screenshots/diariocalendario.png',
+    screenshot: asset('screenshots/diariocalendario.png'),
   },
   {
     title: 'Sistema de Atualização de Prontuários',
     body: 'Projetado para permitir que usuários façam anotações baseado em turnos de trabalho, disponibilizando-as para aprovação posterior.',
-    screenshot: '/screenshots/atualizacaodeplantao.png',
+    screenshot: asset('screenshots/atualizacaodeplantao.png'),
   },
 ];
 
@@ -162,7 +164,7 @@ function AboutContent() {
   return (
     <div className="about-content">
       <div className="avatar-box">
-        <img src="/icons/user-win95.ico" alt="Ícone de usuário" />
+        <img src={asset('icons/user-win95.ico')} alt="Ícone de usuário" />
       </div>
       <div className="intro-copy">
         <h1>Olá! Eu sou Mylena</h1>
@@ -178,7 +180,7 @@ function AboutContent() {
       </p>
       <div className="stack-box">
         {/*<PixelIcon type="computer" /> */}
-        <img src="/icons/sobre.png" alt="Ícone de usuário" />
+        <img src={asset('icons/sobre.png')} alt="Ícone de usuário" />
         <p>
           <strong>Stacks principais: </strong>
           React, JavaScript, TypeScript, HTML, CSS.
@@ -212,7 +214,7 @@ function ContactContent() {
     <div className="contact-content">
       <div className="contact-heading">
         {/*<PixelIcon type="mail" /> */}
-        <img src="/icons/contato.png" alt="Ícone de usuário" />
+        <img src={asset('icons/contato.png')} alt="Ícone de usuário" />
         <div>
           <h2>Vamos conversar!</h2>
           <p>Entre em contato.</p>
@@ -248,7 +250,7 @@ function Taskbar({ openWindows, onOpen }) {
   return (
     <footer className="taskbar">
       <button type="button" className="start-button" aria-label="Start">
-        <img className="start-mark" src="/icons/starticon.png" alt="" />
+        <img className="start-mark" src={asset('icons/starticon.png')} alt="" />
         Start
       </button>
       <div className="task-items">

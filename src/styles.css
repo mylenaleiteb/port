@@ -9,8 +9,8 @@
   --title-text: #ffffff;
   --green: #2fd685;
   --font-system: "MS Sans Serif", Tahoma, Geneva, sans-serif;
-  --cursor-default: url("/icons/win95_cursor.cur"), default;
-  --cursor-hand: url("/icons/win95_cursor_hand.cur"), pointer;
+  --cursor-default: url("../icons/win95_cursor.cur"), default;
+  --cursor-hand: url("../icons/win95_cursor_hand.cur"), pointer;
   font-family: var(--font-system);
   font-synthesis: none;
   text-rendering: geometricPrecision;
