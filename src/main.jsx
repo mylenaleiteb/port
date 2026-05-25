@@ -7,7 +7,7 @@ import './styles.css';
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 const desktopIcons = [
-  { id: 'myComputer', label: 'My Computer', icon: 'my-computer', image: asset('icons/mc.png') },
+  { id: 'myComputer', label: 'Meu Computador', icon: 'my-computer', image: asset('icons/mc.png') },
   { id: 'about', label: 'Sobre', icon: 'folder', image: asset('icons/sobre.png') },
   { id: 'internet', label: 'Internet Explorer', icon: 'internet', image: asset('icons/ie.png') },
   { id: 'projects', label: 'Projetos', icon: 'computer', image: asset('icons/projetos.png') },
@@ -227,7 +227,7 @@ function ContactContent() {
         <li><FaPhone/>     (27)99715-0373</li>
         <li><HiHome/>      Vitória, ES - Brasil</li>
         <li><FaGithub/>    github.com/mylenaleiteb</li>
-        <li><FaInstagram/> @mylenalb.dev</li>
+        <li><FaInstagram/> @mylenalbdev</li>
       </ul>
     </div>
   );
