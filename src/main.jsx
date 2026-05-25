@@ -224,7 +224,7 @@ function ContactContent() {
       <ul>
         {/*<li><span>✉</span> mylenalb.dev@gmail.com</li> */}
         <li><FaEnvelope/>  mylenalb.dev@gmail.com</li>
-        <li><FaPhone/>     (27)99715-0373</li>
+        {/*<li><FaPhone/>     (27)99715-0373</li> */}
         <li><HiHome/>      Vitória, ES - Brasil</li>
         <li><FaGithub/>    github.com/mylenaleiteb</li>
         <li><FaInstagram/> @mylenalbdev</li>
