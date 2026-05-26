@@ -596,9 +596,11 @@ button {
     position: relative;
     top: auto;
     left: auto;
+    bottom: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 18px;
+    max-height: none;
     padding: 22px;
   }
 

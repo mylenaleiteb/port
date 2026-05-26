@@ -271,8 +271,22 @@ function Taskbar({ openWindows, onOpen }) {
 }
 
 function PixelIcon({ type, image, small = false }) {
+  const [imageFailed, setImageFailed] = useState(false);
+
+  if (image && !imageFailed) {
+    return (
+      <img
+        className={`pixel-image ${small ? 'small' : ''}`}
+        src={image}
+        alt=""
+        aria-hidden="true"
+        onError={() => setImageFailed(true)}
+      />
+    );
+  }
+
   if (image) {
-    return <img className={`pixel-image ${small ? 'small' : ''}`} src={image} alt="" aria-hidden="true" />;
+    return <span className={`pixel-icon ${type} ${small ? 'small' : ''}`} aria-hidden="true" />;
   }
 
   return <span className={`pixel-icon ${type} ${small ? 'small' : ''}`} aria-hidden="true" />;
